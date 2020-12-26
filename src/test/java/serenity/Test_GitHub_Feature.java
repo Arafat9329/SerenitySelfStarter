@@ -27,16 +27,15 @@ public class Test_GitHub_Feature {
 
         given()
                 .contentType(ContentType.JSON)
-                .pathParam("username","CybertekSchool")
-                .when()
+                .pathParam("username","CybertekSchool").
+        when()
                 .get("https://api.github.com/users/{username}").
-                then()
+        then()
                 .assertThat()
                 .statusCode(200)
         //.log().all();
         ;
-        Ensure.that("Test My GitHub Return the data1",
-                response -> response.body("login", is("CybertekSchool")));
+        Ensure.that("Test My GitHub Return the data1", response -> response.body("login", is("CybertekSchool")));
 
 
     }
@@ -46,16 +45,15 @@ public class Test_GitHub_Feature {
     public void testManyGitHubGetOneUserEndpoint2() {
 
         given()
-                .contentType(ContentType.JSON)
-                .when()
+                .contentType(ContentType.JSON).
+        when()
                 .get("https://api.github.com/users/CybertekSchool").
-                then()
+        then()
                 .assertThat()
                 .statusCode(200)
         //.log().all();
         ;
-        Ensure.that("Test My GitHub Return the data",
-                response -> response.body("login", is("CybertekSchool")));
+        Ensure.that("Test My GitHub Return the data", response -> response.body("login", is("CybertekSchool")));
 
     }
 
