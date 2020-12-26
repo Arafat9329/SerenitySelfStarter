@@ -53,7 +53,7 @@ public class Test_GitHub_Feature {
                 .statusCode(200)
         //.log().all();
         ;
-        Ensure.that("Test My GitHub Return the data", response -> response.body("login", is("CybertekSchool")));
+        Ensure.that("This is supposed fail", response -> response.body("login", is("voila")));
 
     }
 
