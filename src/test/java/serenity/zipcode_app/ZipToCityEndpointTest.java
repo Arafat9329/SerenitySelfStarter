@@ -1,6 +1,7 @@
 package serenity.zipcode_app;
 
 import io.restassured.RestAssured;
+import net.serenitybdd.junit5.SerenityTest;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -13,6 +14,7 @@ import org.yecht.Data;
 import static net.serenitybdd.rest.SerenityRest.*;
 import static org.hamcrest.Matchers.is;
 
+@SerenityTest
 public class ZipToCityEndpointTest {
     //https://api.zippopotam.us/{{country}}/{{zipcode}}
 
